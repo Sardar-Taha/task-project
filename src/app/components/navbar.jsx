@@ -24,6 +24,7 @@ const NavbarComp = () => {
           <Image
             src={navNotification}
             className="w-[24.78px] h-[30px] mr-[2rem]"
+            alt="Notification Bell"
           />
 
           <div>
@@ -33,7 +34,11 @@ const NavbarComp = () => {
 
           {/* profile */}
 
-          <Image src={profileImage} className="w-[49px] h-[49px] ml-[15px]" />
+          <Image
+            src={profileImage}
+            alt="Profile Img"
+            className="w-[49px] h-[49px] ml-[15px]"
+          />
 
           {/* profile */}
         </div>
