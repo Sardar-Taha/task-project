@@ -2,7 +2,7 @@ import React from "react";
 
 const ReportComponet = () => {
   return (
-    <div className="bg-[#fff] m-7 p-7">
+    <div className="bg-[#fff] m-7 p-7 min-h-[calc(100vh-150px)] rounded-xl">
       {/* form-start */}
       <div className=" flex gap-8">
         {/*left-label */}

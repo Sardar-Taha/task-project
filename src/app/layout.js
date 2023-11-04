@@ -12,12 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex h-screen flex-col md:flex-row ">
+        <div className="flex h-screen flex-col md:flex-row overflow-hidden ">
           <div className="w-full flex-none md:w-64">
             <h1>helo</h1>
           </div>
-          <div className="flex-grow ">{children}</div>
-              
+          <div className="flex-grow overflow-auto">{children}</div>
         </div>
       </body>
     </html>
