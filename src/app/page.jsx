@@ -1,12 +1,10 @@
-import { NavbarComp } from "./components";
+import ButtonComp from "./components/common/button";
 
 export default function Home() {
   return (
     <div>
       <div className="bg-[#fff] m-7 p-7 min-h-[calc(100vh-150px)] rounded-xl">
-        {/* form-start */}
-        <div className=" flex gap-8">
-          {/*left-label */}
+        <div className="flex flex-col md:flex-row gap-8">
           <div className="w-full">
             <label className="block text-[#000] text-[16px] font-[400] mb-2">
               User Name
@@ -34,9 +32,6 @@ export default function Home() {
               className="placeholder w-full h-[50px] py-2 px-3 bg-inputBG border border-borderColor border-opacity-[0.1] rounded shadow-none focus:outline-none text-[#000] text-opacity-[0.58]"
             />
           </div>
-          {/* left-label */}
-
-          {/* right-label */}
 
           <div className="w-full">
             <label className="block text-[#000] text-[16px] font-[400] mb-2">
@@ -69,7 +64,6 @@ export default function Home() {
               <option>test2</option>
             </select>
           </div>
-          {/*right-label */}
         </div>
 
         <label className="block text-[#000] text-[16px] font-[400] mb-2 mt-[2rem]">
@@ -79,7 +73,11 @@ export default function Home() {
           placeholder="Write your comments here"
           className="placeholder w-full  py-2 px-3 bg-inputBG border border-borderColor border-opacity-[0.1] rounded shadow-none focus:outline-none min-h-[175px]"
         />
-        {/* form-end */}
+        <button
+          className={`w-[149px] h-[42px] bg-btnBGColor text-white text-16 font-normal rounded-[5px] border-none mt-8`}
+        >
+          Save{" "}
+        </button>
       </div>
     </div>
   );
