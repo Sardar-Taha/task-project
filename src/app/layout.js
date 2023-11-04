@@ -11,11 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet"
-      ></link>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex h-screen flex-col md:flex-row ">
+          <div className="w-full flex-none md:w-64">
+            <h1>helo</h1>
+          </div>
+          <div className="flex-grow ">{children}</div>
+              
+        </div>
+      </body>
     </html>
   );
 }
