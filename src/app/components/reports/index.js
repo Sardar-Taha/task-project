@@ -74,10 +74,9 @@ const ReportComponet = () => {
       <label className="block text-[#000] text-[16px] font-[400] mb-2 mt-[2rem]">
         Comments
       </label>
-      <input
-        type="text"
+      <textarea
         placeholder="Write your comments here"
-        className="placeholder w-full  py-2 px-3 bg-[#F4F8F1] border border-[#0B1903] border-opacity-[0.1] rounded shadow-none focus:outline-none "
+        className="placeholder w-full  py-2 px-3 bg-[#F4F8F1] border border-[#0B1903] border-opacity-[0.1] rounded shadow-none focus:outline-none min-h-[175px]"
       />
       {/* form-end */}
     </div>
