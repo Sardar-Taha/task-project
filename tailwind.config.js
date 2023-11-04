@@ -21,6 +21,12 @@ module.exports = {
       fontFamily: {
         sans: "Roboto",
       },
+      colors: {
+        secondary: "#0B1903",
+        btnBGColor: "#26710C",
+        borderColor: "#0B1903",
+        inputBG: "#F4F8F1",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
