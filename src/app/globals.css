@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,14 +14,27 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}*/
+body {
+  font-family: "Roboto", sans-serif !important;
+  background-color: #f5fbfb;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav-placeholder::placeholder {
+  color: rgba(0, 0, 0, 0.46);
+  font-size: 14px;
+  font-weight: 400;
+}
+.placeholder::placeholder {
+  color: rgba(0, 0, 0, 0.58) !important;
+  font-size: 16px !important;
+  font-weight: 400;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url("./assets/images/calendarIcon.png") no-repeat center;
+  background-size: contain;
+  width: 10px; /* Adjust the width as needed */
+  height: 10px; /* Adjust the height as needed */
+  cursor: pointer;
 }
