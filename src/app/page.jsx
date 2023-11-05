@@ -20,7 +20,7 @@ export default function Home() {
               className="h-[140px] block mx-auto"
             />
 
-            <h1 className="text-[#000] text-[18px] font-[700] font-[dmSans] text-center  mt-4">
+            <h1 className="text-[#000] text-[18px] font-[700] font-dmSans text-center  mt-4">
               James Wlliams
             </h1>
 

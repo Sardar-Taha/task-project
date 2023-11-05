@@ -110,7 +110,7 @@ function Sidebar() {
           {item.image}
           <h1
             className={`text-[16px] font-normal text-[#fff] ${
-              pathname === item.route ? "text-secondary" : ""
+              pathname === item.route ? "text-secondary font-[600]" : ""
             }`}
           >
             {item.text}
