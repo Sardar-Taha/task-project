@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="px-8 pb-8">
+    <div className="px-2 lg:px-8 pb-8">
       <div className="flex flex-col md:flex-row gap-8 mt-8">
         <div className="w-[100%]  md:w-[30%] rounded-xl">
           <div className="bg-white border border-[#D9D9D9] p-7 rounded-xl block ">
