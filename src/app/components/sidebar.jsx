@@ -93,7 +93,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="w-full bg-secondary h-screen overflow-hidden px-5">
+    <div className="w-full bg-secondary h-screen overflow-hidden px-5 hidden lg:block">
       <Image
         src={sidebarLogo}
         alt="Sidebar Logo"

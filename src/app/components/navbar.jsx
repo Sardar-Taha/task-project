@@ -1,12 +1,20 @@
 "use client";
-import { navNotification, profileImage } from "../assets";
+import { profileImage } from "../assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { AiOutlineSearch } from "react-icons/ai";
+import { IoIosArrowDropright } from "react-icons/io";
+import MobileDrawer from "./mobileDrawer";
 
 const NavbarComp = () => {
   const pathname = usePathname();
+
+  const [open, setOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setOpen(!open);
+  };
 
   return (
     <div>
@@ -14,8 +22,14 @@ const NavbarComp = () => {
       <div className="bg-[#fff] p-4 flex justify-between">
         {/* left-div */}
 
-        <div className="flex gap-4 items-center">
-          <h1 className="font-[600] text-[24px]">
+        <div className="flex gap-4 items-center max-lg:justify-between max-lg:w-full">
+          <IoIosArrowDropright
+            className="text-[58px] text-secondary block lg:hidden"
+            onClick={toggleSidebar}
+          />
+
+          {open && <MobileDrawer open={open} toggleSidebar={toggleSidebar} />}
+          <h1 className="font-[600] text-[24px] text-right lg:text-left">
             {(pathname === "/" && "Home") ||
               (pathname === "/reports" && "Reports") ||
               (pathname === "/time-sheets" && "Time Sheets") ||
@@ -23,7 +37,7 @@ const NavbarComp = () => {
               (pathname === "/notices" && "Notices") ||
               (pathname === "/schedule-and-help" && "Schedule And Help")}
           </h1>
-          <div className="relative">
+          <div className="relative hidden lg:block">
             <input
               type="text"
               placeholder="Search here"
@@ -35,13 +49,7 @@ const NavbarComp = () => {
         {/* left-div */}
 
         {/* right-div */}
-        <div className="flex items-center ">
-          <Image
-            src={navNotification}
-            className="w-[24.78px] h-[30px] mr-[2rem]"
-            alt="Notification Bell"
-          />
-
+        <div className="hidden lg:flex items-center  ">
           <div>
             <h1 className="text-[16px] font-[500]">James Williams</h1>
             <p className="text-end text-[#000] text-opacity-[0.41]">Designer</p>
