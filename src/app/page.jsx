@@ -40,7 +40,7 @@ export default function Home() {
             </div>
 
             <button
-              className={`w-full xl:w-[251px] block mx-auto h-[40px] bg-btnBGColor text-white text-16 font-normal rounded-[5px] border-none mt-4`}
+              className={`w-full xl:w-[251px] max-lg:w-[251px] max-[350px]:w-full block mx-auto h-[40px] bg-btnBGColor text-white text-16 font-normal rounded-[5px] border-none mt-4`}
             >
               Log Out
             </button>
