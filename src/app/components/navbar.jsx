@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { AiOutlineSearch } from "react-icons/ai";
-import { IoIosArrowDropright } from "react-icons/io";
+import { CgMenuMotion } from "react-icons/cg";
 import MobileDrawer from "./mobileDrawer";
 
 const NavbarComp = () => {
@@ -23,10 +23,14 @@ const NavbarComp = () => {
         {/* left-div */}
 
         <div className="flex gap-4 items-center max-lg:justify-between max-lg:w-full">
-          <IoIosArrowDropright
-            className="text-[58px] text-secondary block lg:hidden"
+          <CgMenuMotion
+            className="text-[42px] text-secondary block lg:hidden"
             onClick={toggleSidebar}
           />
+
+          {open && (
+            <div className="fixed max-lg:block hidden top-0 left-0 h-screen w-full bg-[rgba(0,0,0,0.8)] z-10 "></div>
+          )}
 
           {open && <MobileDrawer open={open} toggleSidebar={toggleSidebar} />}
           <h1 className="font-[600] text-[24px] text-right lg:text-left">

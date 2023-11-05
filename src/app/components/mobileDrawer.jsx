@@ -1,5 +1,5 @@
 "use client";
-import { IoIosArrowDropleft } from "react-icons/io";
+import { GiCrossedBones } from "react-icons/gi";
 import React from "react";
 import { useRouter } from "next/navigation";
 import { AiFillHome } from "react-icons/ai";
@@ -14,6 +14,7 @@ import { sidebarLogo } from "../assets";
 import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
 import { profileImage } from "../assets";
+import { useRef, useEffect } from "react";
 
 function MobileDrawer({ open, toggleSidebar }) {
   const router = useRouter();
@@ -95,16 +96,36 @@ function MobileDrawer({ open, toggleSidebar }) {
     },
   ];
 
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        toggleSidebar();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [open]);
+
   return (
-    <div>
-      <nav
-        className={`navbar w-64 absolute overflow-x-scroll top-0 left-0 z-10  bg-secondary h-screen px-5 py-4 ${
-          open ? "navbar-open" : "navbar-close"
-        }`}
-      >
+    <div
+      className={`flex flex-col h-screen  navbar w-64 absolute overflow-x-scroll top-0 left-0 z-10 bg-secondary px-5 py-4 ${
+        open ? "navbar-open" : "navbar-close"
+      }`}
+      ref={containerRef}
+    >
+      <nav className={`flex-1 `}>
         <div className="flex pr-2 justify-end">
-          <IoIosArrowDropleft
-            className="text-[58px] text-white "
+          <GiCrossedBones
+            className="text-[32px] text-white "
             onClick={toggleSidebar}
           />
         </div>
@@ -116,7 +137,7 @@ function MobileDrawer({ open, toggleSidebar }) {
         {sidebarData.map((item) => (
           <div
             key={item.id}
-            className={`flex items-center gap-4  mt-4 cursor-pointer py-4 px-2 ${
+            className={`flex items-center gap-4  mt-4 cursor-pointer py-2 px-2 ${
               pathname === item.route ? "bg-white rounded-lg" : ""
             }`}
             onClick={() => {
@@ -134,7 +155,9 @@ function MobileDrawer({ open, toggleSidebar }) {
             </h1>
           </div>
         ))}
-        <div className="relative block lg:hidden mt-8">
+      </nav>
+      <div className="pb-4">
+        <div className="relative block lg:hidden ">
           <input
             type="text"
             placeholder="Search here"
@@ -142,6 +165,7 @@ function MobileDrawer({ open, toggleSidebar }) {
           />
           <AiOutlineSearch className="absolute top-4 left-2 z-1 text-[18px] cursor-pointer text-[rgba(0,0,0,0.5)]" />
         </div>
+
         <div className="flex flex-row gap-5 justify-start  mt-8">
           <Image
             src={profileImage}
@@ -154,10 +178,8 @@ function MobileDrawer({ open, toggleSidebar }) {
             </h1>
             <p className="text-center text-white">Designer</p>
           </div>
-
-          <div></div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }
