@@ -7,7 +7,7 @@ export { default as timeSheetIcon } from "./images/timeSheetIcon.png";
 export { default as eventIcon } from "./images/eventIcon.png";
 export { default as reportIcon } from "./images/reportIcon.png";
 export { default as noticeIcon } from "./images/noticeIcon.png";
-export { default as sheduleIcon } from "./images/sheduleIcon.png";
+export { default as scheduleIcon } from "./images/sheduleIcon.png";
 export { default as userProfileImg } from "./images/userProfileImg.png";
 export { default as locationIcon } from "./images/locationIcon.png";
 export { default as emailIcon } from "./images/emailIcon.png";
