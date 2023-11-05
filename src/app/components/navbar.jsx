@@ -16,7 +16,11 @@ const NavbarComp = () => {
         <div className="flex gap-4 items-center">
           <h1 className="font-[600] text-[24px]">
             {(pathname === "/" && "Home") ||
-              (pathname === "/reports" && "Reports")}
+              (pathname === "/reports" && "Reports") ||
+              (pathname === "/time-sheets" && "Time Sheets") ||
+              (pathname === "/upcoming-events" && "Upcoming Events") ||
+              (pathname === "/notices" && "Notices") ||
+              (pathname === "/schedule-and-help" && "Schedule And Help")}
           </h1>
           <input
             type="text"

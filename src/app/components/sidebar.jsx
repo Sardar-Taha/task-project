@@ -34,14 +34,20 @@ function Sidebar() {
       </div>
       <div className="flex ml-[2.5rem] gap-4  mt-10">
         <Image src={timeSheetIcon} alt="Home Icon" className="h-[22px]" />
-        <h1 className="text-[16px] font-normal text-[#fff] cursor-pointer ">
+        <h1
+          className="text-[16px] font-normal text-[#fff] cursor-pointer "
+          onClick={() => router.push("/time-sheets")}
+        >
           Time Sheets
         </h1>
       </div>
       <div className="flex ml-[2.5rem] gap-4  mt-10 ">
         <Image src={eventIcon} alt="Home Icon" className="h-[22px]" />
-        <h1 className="text-[16px] font-normal text-[#fff] cursor-pointer ">
-          Upcomng events
+        <h1
+          className="text-[16px] font-normal text-[#fff] cursor-pointer "
+          onClick={() => router.push("/upcoming-events")}
+        >
+          Upcoming Events
         </h1>
       </div>
       <div className="flex ml-[2.5rem] gap-4  mt-10">
@@ -55,14 +61,20 @@ function Sidebar() {
       </div>
       <div className="flex ml-[2.5rem] gap-4  mt-10">
         <Image src={noticeIcon} alt="Home Icon" className="h-[22px]" />
-        <h1 className="text-[16px] font-normal text-[#fff] cursor-pointer ">
+        <h1
+          className="text-[16px] font-normal text-[#fff] cursor-pointer "
+          onClick={() => router.push("/notices")}
+        >
           Notices
         </h1>
       </div>
       <div className="flex ml-[2.5rem] gap-4  mt-10">
         <Image src={sheduleIcon} alt="Home Icon" className="h-[20px]" />
-        <h1 className="text-[16px] font-normal text-[#fff] cursor-pointer ">
-          Shedule & Help
+        <h1
+          className="text-[16px] font-normal text-[#fff] cursor-pointer "
+          onClick={() => router.push("/schedule-and-help")}
+        >
+          Schedule & Help
         </h1>
       </div>
     </div>
