@@ -11,8 +11,8 @@ import {
 export default function Home() {
   return (
     <div className="px-2 lg:px-8 pb-8">
-      <div className="flex flex-col md:flex-row gap-8 mt-8">
-        <div className="w-[100%]  md:w-[30%] rounded-xl">
+      <div className="flex flex-col lg:flex-row gap-8 mt-8">
+        <div className="w-[100%]  lg:w-[30%] rounded-xl">
           <div className="bg-white border border-[#D9D9D9] p-7 rounded-xl block ">
             <Image
               src={userProfileImg}
@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] md:w-[70%]  bg-[#fff] p-7 min-h-[calc(100vh-150px)] rounded-xl ">
+        <div className="w-[100%] lg:w-[70%]  bg-[#fff] p-7 min-h-[calc(100vh-150px)] rounded-xl ">
           <h1 className="text-[#000] text-[24px] font-[700]">User Profile</h1>
 
           <div className="flex flex-col md:flex-row gap-8 mt-4">

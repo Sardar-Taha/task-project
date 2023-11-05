@@ -2,7 +2,7 @@ const Page = () => {
   return (
     <div>
       <div className="bg-[#fff] my-7 py-7 px-2 mx-2 lg:px-7 lg:mx-7 min-h-[calc(100vh-150px)] rounded-xl">
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full">
             <label className="block text-[#000] text-[16px] font-[400] mb-2">
               User Name
