@@ -1,3 +1,15 @@
 export { default as navNotification } from "./images/navNotification.png";
 export { default as profileImage } from "./images/profileImage.png";
 export { default as calendarIcon } from "./images/calendarIcon.png";
+export { default as sidebarLogo } from "./images/sidebarLogo.png";
+export { default as homeIcon } from "./images/homeIcon.png";
+export { default as timeSheetIcon } from "./images/timeSheetIcon.png";
+export { default as eventIcon } from "./images/eventIcon.png";
+export { default as reportIcon } from "./images/reportIcon.png";
+export { default as noticeIcon } from "./images/noticeIcon.png";
+export { default as sheduleIcon } from "./images/sheduleIcon.png";
+export { default as userProfileImg } from "./images/userProfileImg.png";
+export { default as locationIcon } from "./images/locationIcon.png";
+export { default as emailIcon } from "./images/emailIcon.png";
+export { default as addressIcon } from "./images/addressIcon.png";
+export { default as mailIcon } from "./images/mailIcon.png";

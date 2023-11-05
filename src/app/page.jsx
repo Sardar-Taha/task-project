@@ -59,9 +59,9 @@ export default function Home() {
               placeholder="Select Location"
               className="placeholder w-full h-[50px] py-2 px-3 bg-inputBG border border-borderColor border-opacity-[0.1] rounded shadow-none focus:outline-none   text-[#000] text-opacity-[0.58] "
             >
-              <option>test</option>
-              <option>test1</option>
-              <option>test2</option>
+              <option>Select Location</option>
+              <option>Islamabad</option>
+              <option>Rawalpindi</option>
             </select>
           </div>
         </div>

@@ -31,6 +31,12 @@ body {
   font-weight: 400;
 }
 
+.dashboard-placeholder::placeholder {
+  color: #000 !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
   background: url("./assets/images/calendarIcon.png") no-repeat center;
   background-size: contain;

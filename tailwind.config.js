@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: "Roboto",
+        dmSans: "DM Sans",
       },
       colors: {
         secondary: "#0B1903",
