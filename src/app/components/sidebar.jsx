@@ -12,7 +12,7 @@ import {
 
 function Sidebar() {
   return (
-    <div className="w-full bg-secondary h-screen overflow-hidden ">
+    <div className="w-full bg-secondary h-screen overflow-hidden">
       <Image
         src={sidebarLogo}
         alt="Sidebar Logo"
