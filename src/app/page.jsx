@@ -1,5 +1,3 @@
-import ButtonComp from "./components/common/button";
-
 export default function Home() {
   return (
     <div>

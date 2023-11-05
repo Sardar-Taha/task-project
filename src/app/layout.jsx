@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="flex h-screen flex-col lg:flex-row md:overflow-hidden ">
           <div className="w-full flex-none lg:w-[235px]">
-            <Sidebar />
+            {/* <Sidebar /> */}
           </div>
           <div className="flex-grow overflow-auto">
             <NavbarComp />

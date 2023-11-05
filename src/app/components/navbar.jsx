@@ -1,8 +1,12 @@
+"use client";
 import { navNotification, profileImage } from "@/app/assets";
 import Image from "next/image";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const NavbarComp = () => {
+  const pathname = usePathname();
+
   return (
     <div>
       {/* nav-bar-start */}
@@ -10,7 +14,10 @@ const NavbarComp = () => {
         {/* left-div */}
 
         <div className="flex gap-4 items-center">
-          <h1 className="font-[600] text-[24px]">Create Time Sheet</h1>
+          <h1 className="font-[600] text-[24px]">
+            {(pathname === "/" && "Home") ||
+              (pathname === "/reports" && "Reports")}
+          </h1>
           <input
             type="text"
             placeholder="Search here"

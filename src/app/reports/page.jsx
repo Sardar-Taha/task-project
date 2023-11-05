@@ -11,7 +11,7 @@ import {
 const Page = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center">
-      <div className="w-[93%]  md:w-[30%] mt-7 ml-7  rounded-xl">
+      <div className="w-[100%]  md:w-[30%] mt-7 ml-7  rounded-xl">
         <div className="bg-white border border-[#D9D9D9] p-7 rounded-xl block ">
           <Image
             src={userProfileImg}
@@ -65,7 +65,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="w-[93%] md:w-[70%]  bg-[#fff] m-7 p-7 min-h-[calc(100vh-150px)] rounded-xl ">
+      <div className="w-[100%] md:w-[70%]  bg-[#fff] m-7 p-7 min-h-[calc(100vh-150px)] rounded-xl ">
         <h1 className="text-[#000] text-[24px] font-[700]">User Profile</h1>
 
         <div className="flex flex-col md:flex-row gap-8 mt-4">
