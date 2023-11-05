@@ -1,5 +1,5 @@
 "use client";
-import { navNotification, profileImage } from "@/app/assets";
+import { navNotification, profileImage } from "../assets";
 import Image from "next/image";
 import React from "react";
 import { usePathname } from "next/navigation";
