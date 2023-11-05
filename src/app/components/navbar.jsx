@@ -3,6 +3,7 @@ import { navNotification, profileImage } from "../assets";
 import Image from "next/image";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const NavbarComp = () => {
   const pathname = usePathname();
@@ -22,11 +23,14 @@ const NavbarComp = () => {
               (pathname === "/notices" && "Notices") ||
               (pathname === "/schedule-and-help" && "Schedule And Help")}
           </h1>
-          <input
-            type="text"
-            placeholder="Search here"
-            className="nav-placeholder w-[235px] h-[50px] py-2 px-3 bg-[#F4F8F1] border  border-[#0B1903] border-opacity-[0.1] rounded shadow-none focus:outline-none"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search here"
+              className="pl-8 nav-placeholder w-[235px] h-[50px] py-2 px-3 bg-[#F4F8F1] border  border-[#0B1903] border-opacity-[0.1] rounded shadow-none focus:outline-none"
+            />
+            <AiOutlineSearch className="absolute top-4 left-2 z-1 text-[18px] cursor-pointer text-[rgba(0,0,0,0.5)]" />
+          </div>
         </div>
         {/* left-div */}
 
