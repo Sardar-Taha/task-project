@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import {
@@ -9,8 +10,11 @@ import {
   sidebarLogo,
   timeSheetIcon,
 } from "../assets";
+import { useRouter } from "next/navigation";
 
 function Sidebar() {
+  const router = useRouter();
+
   return (
     <div className="w-full bg-secondary h-screen overflow-hidden">
       <Image
@@ -21,7 +25,10 @@ function Sidebar() {
 
       <div className="flex ml-[2.5rem] gap-4  mt-10">
         <Image src={homeIcon} alt="Home Icon" className="bg-white" />
-        <h1 className="text-[16px] font-normal text-[#fff] cursor-pointer ">
+        <h1
+          className="text-[16px] font-normal text-[#fff] cursor-pointer "
+          onClick={() => router.push("/")}
+        >
           Home
         </h1>
       </div>
@@ -39,7 +46,10 @@ function Sidebar() {
       </div>
       <div className="flex ml-[2.5rem] gap-4  mt-10">
         <Image src={reportIcon} alt="Home Icon" className="h-[22px]" />
-        <h1 className="text-[16px] font-normal text-[#fff] cursor-pointer ">
+        <h1
+          className="text-[16px] font-normal text-[#fff] cursor-pointer "
+          onClick={() => router.push("/reports")}
+        >
           Reports
         </h1>
       </div>
